@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
+import style from './style.js';
 
 import NavBar from './components/NavBar';
 
@@ -8,7 +9,7 @@ export default class App extends Component {
     return (
       <div>
         <NavBar />
-        <div className="container" style={{ backgroundColor: "white" }}>
+        <div className="container" style={style.whiteBackground}>
           <div className="row">
             <div className="col s8">
               <h1>Ted Shin</h1>
@@ -16,11 +17,11 @@ export default class App extends Component {
             </div>
             <div className="col s4">
               <img
-                src="https://lh4.googleusercontent.com/nAN7y4JodBJESCzEiPOj26SxDv59n64d30R3453VvbWCgmImW2blGgWngjkbT1U8OIQKlAFoC7g_viE=w1600-h810-rw"
-                alt="Ted's Profile Image"
+                src="https://drive.google.com/open?id=0B1j4xFUQtHYFdmNMSk03Nkd5Qlk"
+                alt="Ted's Profile"
                 height="250"
                 width="250"
-                style={{ borderRadius: "50%" }}
+                style={style.circleImg}
               />
             </div>
           </div>
