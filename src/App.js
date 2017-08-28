@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import style from './style.js';
 
 import NavBar from './components/NavBar';
+import Portfolio from './components/Portfolio';
 
 export default class App extends Component {
   render() {
@@ -17,7 +18,7 @@ export default class App extends Component {
             </div>
             <div className="col s4">
               <img
-                src="https://drive.google.com/open?id=0B1j4xFUQtHYFdmNMSk03Nkd5Qlk"
+                src="https://lh4.googleusercontent.com/nAN7y4JodBJESCzEiPOj26SxDv59n64d30R3453VvbWCgmImW2blGgWngjkbT1U8OIQKlAFoC7g_viE=w1600-h810-rw"
                 alt="Ted's Profile"
                 height="250"
                 width="250"
@@ -25,11 +26,7 @@ export default class App extends Component {
               />
             </div>
           </div>
-          <div className="row">
-            <div className="col s12">
-              <h1 className="center-align">Portfolio</h1>
-            </div>
-          </div>
+          <Portfolio />
           <div className="row">
             <div className="col s12">
               <h1 className="center-align">Contact Me</h1>
