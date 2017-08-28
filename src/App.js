@@ -4,6 +4,7 @@ import style from './style.js';
 
 import NavBar from './components/NavBar';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 export default class App extends Component {
   render() {
@@ -27,11 +28,7 @@ export default class App extends Component {
             </div>
           </div>
           <Portfolio />
-          <div className="row">
-            <div className="col s12">
-              <h1 className="center-align">Contact Me</h1>
-            </div>
-          </div>
+          <Contact />
         </div>
       </div>
     );
