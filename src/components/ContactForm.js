@@ -4,13 +4,15 @@ export default class ContactForm extends Component {
   render() {
     return (
       <div className="row">
-        <form className="col s12">
+        <form className="col s6">
           <div className="row">
-            <div className="input-field col s6">
+            <div className="input-field col s12">
               <input id="name" type="text" className="validate" />
               <label for="name">Name</label>
             </div>
-            <div className="input-field col s6">
+          </div>
+          <div className="row">
+            <div className="input-field col s12">
               <input id="email" type="email" className="validate" />
               <label for="email">Email</label>
             </div>
@@ -28,6 +30,9 @@ export default class ContactForm extends Component {
             </div>
           </div>
         </form>
+        <div className="col s6">
+          Send me a message here!
+        </div>
       </div>
     );
   }
