@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 export default class ContactForm extends Component {
+
+
   render() {
     return (
       <div className="row">
@@ -27,6 +29,13 @@ export default class ContactForm extends Component {
             <div className="input-field col s12">
               <input id="message" type="text" className="validate" />
               <label for="message">Message</label>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s4">
+              <button className="btn waves-effect waves-light" type="submit" name="action">Send
+                <i className="material-icons right">send</i>
+              </button>
             </div>
           </div>
         </form>
