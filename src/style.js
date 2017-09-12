@@ -20,7 +20,16 @@ const style = {
     height: 'auto',
     margin: 0,
     padding: '0 24px 20px 12px',
-  }
+  },
+  aboutBackground: {
+    backgroundColor: 'gray',
+    color: 'white',
+    margin: 0,
+    paddingTop: '30px',
+    paddingBottom: '30px',
+    paddingRight: 0,
+    paddingLeft: 0,
+  },
 };
 
 export default style;
