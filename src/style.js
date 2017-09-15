@@ -30,6 +30,9 @@ const style = {
     paddingRight: 0,
     paddingLeft: 0,
   },
+  sectionHeaderText: {
+    fontSize: '34px',
+  },
 };
 
 export default style;

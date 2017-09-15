@@ -12,6 +12,7 @@ export default class About extends Component {
           <img
             src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/01e42c782c0cdc515c78a4b506892482a66d9839/profile_png.png"
             alt="Ted's Profile"
+            title="Ted Shin"
             height="250"
             width="250"
             style={style.circleImg}

@@ -20,9 +20,8 @@ export default class Footer extends Component {
           </div>
         </div>
         <div className="footer-copyright">
-          <div className="container">
-          © 2014 Copyright Text
-          
+          <div className="container center-align">
+          © 2017. All Rights Reserved
           </div>
         </div>
       </footer>
