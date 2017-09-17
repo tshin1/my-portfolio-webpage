@@ -4,7 +4,7 @@ import style from '../style.js';
 export default class Portfolio extends Component {
   render() {
     return (
-      <div className="row" style={style.noMarginPadding}>
+      <div className="row section scrollspy" id="portfolio" style={style.noMarginPadding}>
         <div className="col s12" style={style.noMarginPadding}>
           <h1 className="center-align" style={style.sectionHeaderText}>Portfolio</h1>
           <div className="row" style={style.noMarginPadding}>

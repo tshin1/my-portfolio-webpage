@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 // import './App.css';
 import style from './style.js';
 
@@ -9,6 +10,12 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default class App extends Component {
+  componentDidMount() {
+    $(document).ready(function(){
+      $('.scrollspy').scrollSpy();
+    });
+  }
+
   render() {
     return (
       <div>
