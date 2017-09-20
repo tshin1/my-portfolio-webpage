@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -8,6 +9,12 @@ export default class NavBar extends Component {
       porfolioActive: '',
       contactActive: '',
     };
+  }
+
+  componentDidMount() {
+    $(document).ready(function(){
+      $('.scrollspy').scrollSpy();
+    });
   }
 
   aboutClicked = () => {
