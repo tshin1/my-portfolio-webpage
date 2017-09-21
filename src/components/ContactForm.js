@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import $ from 'jquery';
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -28,12 +30,14 @@ export default class ContactForm extends Component {
   }
 
   handleSubmit = (event) => {
-    axios.post('https://script.google.com/macros/s/AKfycbworLNlQ8S56AetLC7RWDSwPlUNwP_Hv4pnity-hvnW_mym3c2e/exec', {
-      name: this.state.name,
-      email: this.state.email,
-      phone: this.state.phone,
-      message: this.state.message,
-    })
+    // Google spreadsheet script
+    let url = 'https://script.google.com/macros/s/AKfycbworLNlQ8S56AetLC7RWDSwPlUNwP_Hv4pnity-hvnW_mym3c2e/exec';
+    // I had to do it this format to get it workign with axios. jquery did not require this format.
+    // jquery worked even when I just sent in the data as a plain object.
+    let data = 'name=' + this.state.name + '&email=' + this.state.email + '&message=' + this.state.message;
+
+    // Send form data via axios post
+    axios.post(url, data)
     .then(function(response) {
       console.log(response);
     })
@@ -41,9 +45,10 @@ export default class ContactForm extends Component {
       console.log(error);
     });
 
+    // Prevent form default so this function can take over
     event.preventDefault();
   }
-// https://script.google.com/macros/s/AKfycbworLNlQ8S56AetLC7RWDSwPlUNwP_Hv4pnity-hvnW_mym3c2e/exec
+
   render() {
     return (
       <div className="row">
