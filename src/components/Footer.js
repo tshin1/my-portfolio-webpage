@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import IoGithub from 'react-icons/lib/io/social-github';
+import IoLinkedin from 'react-icons/lib/io/social-linkedin';
 
 export default class Footer extends Component {
   render() {
@@ -11,17 +13,15 @@ export default class Footer extends Component {
               <p className="grey-text text-lighten-4">Made with React and Materialize by Ted Shin.</p>
             </div>
             <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Links</h5>
-              <ul>
-                <li><a className="grey-text text-lighten-3" href="https://github.com/tshin7">Github</a></li>
-                <li><a className="grey-text text-lighten-3" href="https://www.linkedin.com/in/tshin7/">LinkedIn</a></li>
-              </ul>
+              <h5 className="white-text">Around the Web</h5>
+              <a className="grey-text text-lighten-3" href="https://github.com/tshin7"><IoGithub size="34"/></a>
+              <a className="grey-text text-lighten-3" href="https://www.linkedin.com/in/tshin7/"><IoLinkedin size="34"/></a>
             </div>
           </div>
         </div>
         <div className="footer-copyright">
           <div className="container center-align">
-          © 2017. All Rights Reserved
+          Copyright © 2017 Ted Shin
           </div>
         </div>
       </footer>
