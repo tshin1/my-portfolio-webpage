@@ -10,7 +10,23 @@ export default class ContactForm extends Component {
       email: '',
       phone: '',
       message: '',
+      honeypot: '',
     };
+  }
+
+  validEmail = (email) => {
+    let re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
+
+  detectBot = (honeypot) => {
+    if (honeypot) { // if hidden form filled up
+      console.log("Robot Detected!");
+      return true;
+    } else {
+      console.log("Welcome Human!");
+      return false;
+    }
   }
 
   handleNameChange = (event) => {
@@ -29,7 +45,15 @@ export default class ContactForm extends Component {
     this.setState({message: event.target.value});
   }
 
+  handleHoneypotChange = (event) => {
+    this.setState({honeypot: event.target.value})
+  }
+
   handleSubmit = (event) => {
+    // Dont submit form if bot is detected
+    if (this.detectBot(this.state.honeypot)) {
+      return false;
+    }
     // Google spreadsheet script
     let url = 'https://script.google.com/macros/s/AKfycbworLNlQ8S56AetLC7RWDSwPlUNwP_Hv4pnity-hvnW_mym3c2e/exec';
     // I had to do it this format to get it workign with axios. jquery did not require this format.
@@ -57,7 +81,7 @@ export default class ContactForm extends Component {
           className="col s6"
           style={{paddingLeft: '40px'}}
         >
-          <input id="honeypot" name="honeypot" style={{display: 'none'}} />
+          <input id="honeypot" name="honeypot" onChange={this.handleHoneypotChange} style={{display: 'none'}} />
           <div className="row">
             <div className="input-field col s12">
               <input id="name" value={this.state.name} onChange={this.handleNameChange} name="name" type="text" className="validate" />
