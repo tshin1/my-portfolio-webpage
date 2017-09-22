@@ -59,7 +59,7 @@ export default class ContactForm extends Component {
     let url = 'https://script.google.com/macros/s/AKfycbworLNlQ8S56AetLC7RWDSwPlUNwP_Hv4pnity-hvnW_mym3c2e/exec';
     // I had to do it this format to get it workign with axios. jquery did not require this format.
     // jquery worked even when I just sent in the data as a plain object.
-    let data = 'name=' + this.state.name + '&email=' + this.state.email + '&message=' + this.state.message;
+    let data = 'name=' + this.state.name + '&email=' + this.state.email + '&phone=' + this.state.phone + '&message=' + this.state.message ;
     // Save 'this'
     let self = this;
     // Send form data via axios post
