@@ -78,18 +78,17 @@ export default class ContactForm extends Component {
 
   render() {
     return (
-      <div className="row">
+      <div className="row" style={{}}>
         {
           this.state.formSubmitted
           ?
-            <div className="col s6" style={{paddingLeft: '40px'}}>
+            <div className="col s12" style={{paddingLeft: '40px', paddingRight: '40px'}}>
               <h5>Thanks! I will contact you soon!</h5>
             </div>
           :
           <form
             onSubmit={this.handleSubmit}
-            className="col s6"
-            style={{paddingLeft: '40px'}}
+            style={{maxWidth: '700px', paddingLeft: '40px', paddingRight: '40px', margin: '0 auto'}}
           >
             <input id="honeypot" name="honeypot" onChange={this.handleHoneypotChange} style={{display: 'none'}} />
             <div className="row">
@@ -125,9 +124,6 @@ export default class ContactForm extends Component {
             </div>
           </form>
         }
-        <div className="col s4">
-          Send me a message here!
-        </div>
       </div>
     );
   }

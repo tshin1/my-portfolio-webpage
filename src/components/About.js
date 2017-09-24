@@ -5,10 +5,10 @@ export default class About extends Component {
   render() {
     return (
       <div className="row section scrollspy" style={style.aboutBackground} id="about">
-        <div className="col s8" style={{paddingLeft: '70px', paddingRight: '0'}}>
+        <div className="col s12 l8" style={{paddingLeft: '70px', paddingRight: '0'}}>
           <p style={{fontSize: '18px'}}>Full stack developer and CS student. Experience with React, React Native, ES6, Express, MongoDB, Sass, Webpack, Git, Django, Javascript, Python</p>
         </div>
-        <div className="col s4">
+        <div className="col s4 l4 center-align">
           <img
             src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/01e42c782c0cdc515c78a4b506892482a66d9839/profile_png.png"
             alt="Ted's Profile"
