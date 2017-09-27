@@ -27,8 +27,8 @@ const style = {
     margin: 0,
     paddingTop: '30px',
     paddingBottom: '30px',
-    paddingRight: 0,
-    paddingLeft: 0,
+    paddingRight: '50px',
+    paddingLeft: '50px',
   },
   sectionHeaderText: {
     fontSize: '34px',
