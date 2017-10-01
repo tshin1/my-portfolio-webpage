@@ -10,9 +10,9 @@ export default class Portfolio extends Component {
   }
 
   componentDidMount() {
-    // Add listener to change main profile image size and location on page load
+    // Add listener to check screen width on page load
     this.checkScreenWidth();
-    // Add listener to change main profile image size and location when screen size changes
+    // Add listener to check screen width when screen size changes
     window.addEventListener("resize", this.checkScreenWidth);
   }
 

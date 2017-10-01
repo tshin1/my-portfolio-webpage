@@ -6,6 +6,7 @@ export default class About extends Component {
     super(props);
     this.state = {
       profileImageOnTop: false,
+      smallerProfileImage: false,
     };
   }
 
@@ -31,27 +32,16 @@ export default class About extends Component {
         profileImageOnTop: true,
       });
     }
-    // if (width >= 992) {
-    //   this.setState({
-    //     mainProfileSize: "30%",
-    //     mainProfileCentered: false,
-    //   });
-    // } else if (width >= 600) {
-    //   this.setState({
-    //     mainProfileSize: "40%",
-    //     mainProfileCentered: false,
-    //   });
-    // } else if (width >= 375){
-    //   this.setState({
-    //     mainProfileSize: "40%",
-    //     mainProfileCentered: true,
-    //   });
-    // } else {
-    //   this.setState({
-    //     mainProfileSize: "40%",
-    //     mainProfileCentered: true,
-    //   });
-    // }
+
+    if (this.state.smallerProfileImage && width >= 450) {
+      this.setState({
+        smallerProfileImage: false,
+      });
+    } else if (width < 450) {
+      this.setState({
+        smallerProfileImage: true,
+      });
+    }
   }
 
   render() {
@@ -62,14 +52,27 @@ export default class About extends Component {
           ?
             <div style={style.noMarginPadding}>
               <div className="col s12 center-align" style={{}}>
-                <img
-                  src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/01e42c782c0cdc515c78a4b506892482a66d9839/profile_png.png"
-                  alt="Ted's Profile"
-                  title="Ted Shin"
-                  height="250"
-                  width="250"
-                  style={style.circleImg}
-                />
+              {
+                this.state.smallerProfileImage
+                  ?
+                    <img
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/01e42c782c0cdc515c78a4b506892482a66d9839/profile_png.png"
+                      alt="Ted's Profile"
+                      title="Ted Shin"
+                      width="150"
+                      height="150"
+                      style={style.circleImg}
+                    />
+                  :
+                    <img
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/01e42c782c0cdc515c78a4b506892482a66d9839/profile_png.png"
+                      alt="Ted's Profile"
+                      title="Ted Shin"
+                      width="250"
+                      height="250"
+                      style={style.circleImg}
+                    />
+              }
               </div>
               <div className="col s12" style={{paddingLeft: '0px', paddingRight: '0'}}>
                 <p style={{fontSize: '18px'}}>Full stack developer and CS student. Experience with React, React Native, ES6, Express, MongoDB, Sass, Webpack, Git, Django, Javascript, Python</p>
@@ -85,9 +88,9 @@ export default class About extends Component {
                   src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/01e42c782c0cdc515c78a4b506892482a66d9839/profile_png.png"
                   alt="Ted's Profile"
                   title="Ted Shin"
-                  height="250"
                   width="250"
-                  style={style.circleImg}
+                  height="250"
+                  style={this.state.smallerProfileImage ? (style.circleImgSmall) : (style.circleImg)}
                 />
               </div>
             </div>
