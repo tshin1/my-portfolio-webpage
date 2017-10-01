@@ -21,6 +21,12 @@ const style = {
     margin: 0,
     padding: '0 24px 20px 12px',
   },
+  projectImageSmallerScreen: {
+    width: '100%',
+    height: 'auto',
+    margin: 0,
+    padding: '0 24px 20px 24px',
+  },
   aboutBackground: {
     backgroundColor: 'gray',
     color: 'white',
