@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'materialize-css';
 // import './App.css';
 import style from './style.js';
 
