@@ -72,19 +72,25 @@ export default class HomepageLayout extends Component {
             <Container text>
               <Header
                 as='h1'
-                content='Imagine-a-Company'
                 inverted
                 style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
-              />
+              >
+              Ted Shin
+              </Header>
               <Header
                 as='h2'
-                content='Do whatever you want when you want to.'
                 inverted
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-              />
-              <Button primary size='huge'>
-                Get Started
-                <Icon name='right arrow' />
+              >
+              Hi, I'm a software engineer
+              </Header>
+              <Button primary size='medium'>
+                <Icon
+                  name='angle double down'
+                  size='large'
+                  style={{ marginRight: '0.1em' }}
+                />
+                Let's get started
               </Button>
             </Container>
           </Segment>
