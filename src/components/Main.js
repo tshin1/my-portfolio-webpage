@@ -13,29 +13,7 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
-import SideMenu from './SideMenu';
-
-const FixedMenu = () => (
-  <Menu fixed='top' size='large'>
-    <Container>
-      <Menu.Item as='a' active>Home</Menu.Item>
-      <Menu.Item as='a'>Work</Menu.Item>
-      <Menu.Item as='a'>Company</Menu.Item>
-      <Menu.Item as='a'>Careers</Menu.Item>
-      <Menu.Menu position='right'>
-        <Menu.Item className='item'>
-          <Button as='a'>Log in</Button>
-        </Menu.Item>
-        <Menu.Item>
-          <Button as='a' primary>Sign Up</Button>
-        </Menu.Item>
-      </Menu.Menu>
-    </Container>
-  </Menu>
-)
-
 export default class HomepageLayout extends Component {
-
 
   render() {
 
@@ -48,19 +26,19 @@ export default class HomepageLayout extends Component {
           style={{ minHeight: 700, padding: '1em 0em' }}
           vertical
         >
-          <Container>
-            <Menu inverted pointing secondary size='large'>
-              <Menu.Item as='a' active>Home</Menu.Item>
-              <Menu.Item as='a'>Work</Menu.Item>
-              <Menu.Item as='a'>Company</Menu.Item>
-              <Menu.Item as='a'>Careers</Menu.Item>
-              <Menu.Item position='right'>
-                <Button as='a' inverted>Log in</Button>
-                <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-              </Menu.Item>
-            </Menu>
-          </Container>
-          <Button onClick={this.props.toggleVisibility}>Toggle Visibility</Button>
+          <Menu inverted secondary size='small'>
+            <Menu.Item position='right'>
+              <Button onClick={this.props.toggleVisibility}>
+                <Icon
+                  inverted
+                  name='sidebar'
+                  size='large'
+                  style={{ marginRight: '0.1em' }}
+                />
+              </Button>
+            </Menu.Item>
+          </Menu>
+
           <Container text>
             <Header
               as='h1'
