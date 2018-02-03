@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import './App.css';
+import { Button } from 'antd';
+import './App.css';
 
-// import Main from './components/Main';
-import SideMenu from './components/SideMenu';
+import Main from './components/Main';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <SideMenu />
+        <Main />
       </div>
     );
   }
