@@ -1,45 +1,74 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Icon, Row, Col } from 'antd';
-import './Main.css';
-const { Header, Sider, Content } = Layout;
+import styled from 'styled-components';
 
-export default class Main extends Component {
+import './Main.css';
+
+const Section = styled.div`
+  text-align: center;
+  color: white;
+  min-height: 100vh;
+`
+
+const AboutSection = Section.extend`
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const Name = styled.h1`
+  color: white;
+`
+
+const AboutText = styled.h2`
+  color: white;
+`
+
+const PortfolioSection = Section.extend`
+  background-color: gray;
+`
+
+const ProjectsSection = Section.extend`
+  background-color: black;
+`
+
+const ContactSection = Section.extend`
+  background-color: gray;
+`
+
+const LinksSection = Section.extend`
+  background-color: black;
+`
+
+class Main extends Component {
   state = {
 
   };
 
   render() {
     return (
-      <div style={{textAlign: "center", height: "100%"}}>
-        <div id="welcome" style={{...styles.section, ...styles.blackBackground}}>
-          hello
-        </div>
-        <div id="aboutme" style={{...styles.section, ...styles.grayBackground}}>
-          About me
-        </div>
-        <div id="portfolio" style={{...styles.section, ...styles.blackBackground}}>
-        </div>
-        <div id="projects" style={{...styles.section, ...styles.grayBackground}}>
-        </div>
-        <div id="contact" style={{...styles.section, ...styles.blackBackground}}>
-        </div>
-        <div id="links" style={{...styles.section, ...styles.grayBackground}}>
-        </div>
+      <div>
+        <AboutSection>
+          <Name>Ted Shin</Name>
+          <AboutText>Hi, I'm a Software Engineer</AboutText>
+        </AboutSection>
+        <PortfolioSection>
+
+        </PortfolioSection>
+        <ProjectsSection>
+
+        </ProjectsSection>
+        <ContactSection>
+
+        </ContactSection>
+        <LinksSection>
+
+        </LinksSection>
       </div>
     );
   }
 }
 
-const styles = {
-  section: {
-    color: "white",
-    height: "auto",
-    minHeight: "100vh"
-  },
-  blackBackground: {
-    backgroundColor: "black",
-  },
-  grayBackground: {
-    backgroundColor: "gray",
-  }
-};
+export default Main;
