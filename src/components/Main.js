@@ -19,6 +19,17 @@ const Section = styled.div`
   // #####
 `
 
+// title text for sections
+const SectionTitle = styled.h2`
+  color: white;
+  font-size: 2em;
+`
+
+const ContentContainer = styled.div`
+  max-width: 70vw;
+  padding: 2em 2em;
+`
+
 const Button = styled.button`
 
 `
@@ -30,13 +41,6 @@ const PrimaryButton = Button.extend`
 const DefaultButton = Button.extend`
   color: black;
   background-color: #FFFFFF;
-`
-
-// container that holds content for each Section
-const ContentContainer = styled.div`
-  max-width: 50vw;
-  border: 2px solid black;
-  padding: 2em 2em;
 `
 
 /*******************/
@@ -65,9 +69,11 @@ const AboutSection = Section.extend`
 
 `
 
-const AboutTitle = styled.h2`
-  color: white;
-  font-size: 2em;
+// container that holds content for about text
+const AboutContainer = styled.div`
+  max-width: 50vw;
+  border: 2px solid black;
+  padding: 2em 2em;
 `
 
 const AboutText = styled.p`
@@ -103,6 +109,23 @@ const LinksSection = Section.extend`
   background-color: gray;
 `
 
+const PortfolioRowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2em;
+`
+
+const PortfolioImageLeft = styled.img`
+  width: 100%;
+  margin-right: 2em;
+`
+
+const PortfolioImageRight = styled.img`
+  width: 100%;
+  margin-left: 2em;
+`
+
 class Main extends Component {
   state = {
 
@@ -119,15 +142,78 @@ class Main extends Component {
           </ContentContainer>
         </WelcomeSection>
         <AboutSection>
-          <ContentContainer>
-            <AboutTitle>A Little About Me</AboutTitle>
+          <SectionTitle>A Little About Me</SectionTitle>
+          <AboutContainer>
             <AboutText>I am a Full Stack Developer with expertise in building web applications, APIs, and backend systems in Javascript, React, Redux, Node, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
             <DefaultButton>View My Portfolio</DefaultButton>
-          </ContentContainer>
+          </AboutContainer>
         </AboutSection>
         <PortfolioSection>
-
+          <SectionTitle>Web Portfolio</SectionTitle>
+          <ContentContainer>
+            <PortfolioRowContainer>
+              <div>
+                <a href="https://pollsta.herokuapp.com/polls">
+                  <PortfolioImageLeft
+                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
+                    alt="Pollsta"
+                    title="Pollsta"
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="https://poppin-bars.herokuapp.com/search">
+                    <PortfolioImageRight
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/poppin-bars.png"
+                      alt="Poppin Bars"
+                      title="Poppin Bars"
+                    />
+                  </a>
+              </div>
+            </PortfolioRowContainer>
+            <PortfolioRowContainer>
+              <div>
+                <a href="https://tshin7.github.io/meteorite-landings-with-d3/">
+                  <PortfolioImageLeft
+                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/meteorite.png"
+                    alt="Meteorite Landings With D3"
+                    title="Meteorite Landings With D3"
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="https://tshin7.github.io/roguelike-cave-crawler/">
+                  <PortfolioImageRight
+                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/roguelike.png"
+                    alt="Roguelike Cave Crawler"
+                    title="Roguelike Cave Crawler"
+                  />
+                </a>
+              </div>
+            </PortfolioRowContainer>
+            <PortfolioRowContainer>
+              <div>
+                <a href="https://monitor-stocks.herokuapp.com/">
+                  <PortfolioImageLeft
+                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/stocks.png"
+                    alt="Stocks Monitor"
+                    title="Stocks Monitor"
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="https://tshin7.github.io/simon-game-clone/">
+                  <PortfolioImageRight
+                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/simon.png"
+                    alt="Simon Game Clone"
+                    title="Simon Game Clone"
+                  />
+                </a>
+              </div>
+            </PortfolioRowContainer>
+          </ContentContainer>
+          <DefaultButton>Check Out My Projects</DefaultButton>
         </PortfolioSection>
         <ProjectsSection>
 
