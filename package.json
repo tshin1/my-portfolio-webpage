@@ -4,25 +4,24 @@
   "private": true,
   "homepage": "https://tshin7.github.io",
   "dependencies": {
-    "antd": "^3.1.6",
     "axios": "^0.16.2",
     "gh-pages": "^1.1.0",
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-icons": "^2.2.7",
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.6.3",
-    "react-app-rewired": "^1.4.1",
     "react-scripts": "1.0.11"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import FaGithub from 'react-icons/lib/fa/github';
+import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 
 import './Main.css';
 
@@ -99,7 +101,7 @@ const ProjectsSection = Section.extend`
 /* Contact Section */
 /*******************/
 const ContactSection = Section.extend`
-  background-color: black;
+  background-color: gray;
 `
 
 /*****************/
@@ -126,6 +128,11 @@ const PortfolioImageRight = styled.img`
   margin-left: 2em;
 `
 
+const LinksContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 class Main extends Component {
   state = {
 
@@ -146,8 +153,8 @@ class Main extends Component {
           <AboutContainer>
             <AboutText>I am a Full Stack Developer with expertise in building web applications, APIs, and backend systems in Javascript, React, Redux, Node, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
-            <DefaultButton>View My Portfolio</DefaultButton>
           </AboutContainer>
+          <DefaultButton>Check Out My Projects</DefaultButton>
         </AboutSection>
         <PortfolioSection>
           <SectionTitle>Web Portfolio</SectionTitle>
@@ -213,17 +220,17 @@ class Main extends Component {
               </div>
             </PortfolioRowContainer>
           </ContentContainer>
-          <DefaultButton>Check Out My Projects</DefaultButton>
+          <DefaultButton>Contact Me</DefaultButton>
         </PortfolioSection>
-        <ProjectsSection>
-
-        </ProjectsSection>
         <ContactSection>
-
+          <SectionTitle>Contact Me</SectionTitle>
+          <h2>t d y s h i n     @     g m a i l     .     com</h2>
+          <LinksContainer>
+            <FaLinkedin size={50} />
+            <FaGithub size={50} />
+          </LinksContainer>
+          <h2> Copyright © 2018 Ted Shin</h2>
         </ContactSection>
-        <LinksSection>
-
-        </LinksSection>
       </div>
     );
   }
