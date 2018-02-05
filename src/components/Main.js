@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { scroller } from 'react-scroll'
 import FaGithub from 'react-icons/lib/fa/github';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 
@@ -134,9 +135,23 @@ const LinksContainer = styled.div`
 `
 
 class Main extends Component {
+  constructor (props) {
+    super(props);
+  }
+
   state = {
 
   };
+
+  scrollToElement = (event) => {
+    // value holds the id of the target container
+    const targetElementId = event.target.value;
+    scroller.scrollTo(targetElementId, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+    });
+  }
 
   render() {
     return (
@@ -145,18 +160,18 @@ class Main extends Component {
           <ContentContainer>
             <Name>Ted Shin</Name>
             <WelcomeText>Hi, I'm a Software Engineer</WelcomeText>
-            <PrimaryButton>Let's Get Started</PrimaryButton>
+            <PrimaryButton onClick={this.scrollToElement} value="about-section">Let's Get Started</PrimaryButton>
           </ContentContainer>
         </WelcomeSection>
-        <AboutSection>
+        <AboutSection id="about-section">
           <SectionTitle>A Little About Me</SectionTitle>
           <AboutContainer>
             <AboutText>I am a Full Stack Developer with expertise in building web applications, APIs, and backend systems in Javascript, React, Redux, Node, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
           </AboutContainer>
-          <DefaultButton>Check Out My Projects</DefaultButton>
+          <DefaultButton onClick={this.scrollToElement} value="portfolio-section">Check Out My Projects</DefaultButton>
         </AboutSection>
-        <PortfolioSection>
+        <PortfolioSection id="portfolio-section">
           <SectionTitle>Web Portfolio</SectionTitle>
           <ContentContainer>
             <PortfolioRowContainer>
@@ -220,9 +235,9 @@ class Main extends Component {
               </div>
             </PortfolioRowContainer>
           </ContentContainer>
-          <DefaultButton>Contact Me</DefaultButton>
+          <DefaultButton onClick={this.scrollToElement} value="contact-section">Contact Me</DefaultButton>
         </PortfolioSection>
-        <ContactSection>
+        <ContactSection id="contact-section">
           <SectionTitle>Contact Me</SectionTitle>
           <h2>t d y s h i n     @     g m a i l     .     com</h2>
           <LinksContainer>
