@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { scroller } from 'react-scroll'
 import FaGithub from 'react-icons/lib/fa/github';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
+import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down';
 
 import './Main.css';
 
@@ -31,19 +32,23 @@ const SectionTitle = styled.h2`
 const ContentContainer = styled.div`
   max-width: 70vw;
   padding: 2em 2em;
+  text-align: center;
 `
 
 const Button = styled.button`
-
+  border-radius: 0.3em;
+  padding: 0.5em;
+  border: 1px solid transparent;
+  cursor: pointer;
 `
 
 const PrimaryButton = Button.extend`
-  background-color: #428bca;
+
 `
 
 const DefaultButton = Button.extend`
-  color: black;
-  background-color: #FFFFFF;
+
+  color: #333;
 `
 
 /*******************/
@@ -160,7 +165,15 @@ class Main extends Component {
           <ContentContainer>
             <Name>Ted Shin</Name>
             <WelcomeText>Hi, I'm a Software Engineer</WelcomeText>
-            <PrimaryButton onClick={this.scrollToElement} value="about-section">Let's Get Started</PrimaryButton>
+            <PrimaryButton
+              className="btn btn-primary"
+              onClick={this.scrollToElement}
+              value="about-section"
+              type="button"
+            >
+              <FaAngleDoubleDown size={20} />
+              Let's Get Started
+            </PrimaryButton>
           </ContentContainer>
         </WelcomeSection>
         <AboutSection id="about-section">
@@ -169,7 +182,14 @@ class Main extends Component {
             <AboutText>I am a Full Stack Developer with expertise in building web applications, APIs, and backend systems in Javascript, React, Redux, Node, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
           </AboutContainer>
-          <DefaultButton onClick={this.scrollToElement} value="portfolio-section">Check Out My Projects</DefaultButton>
+          <DefaultButton
+            className="btn btn-default"
+            onClick={this.scrollToElement}
+            value="portfolio-section"
+            type="button"
+          >
+          Check Out My Projects
+          </DefaultButton>
         </AboutSection>
         <PortfolioSection id="portfolio-section">
           <SectionTitle>Web Portfolio</SectionTitle>
@@ -235,7 +255,14 @@ class Main extends Component {
               </div>
             </PortfolioRowContainer>
           </ContentContainer>
-          <DefaultButton onClick={this.scrollToElement} value="contact-section">Contact Me</DefaultButton>
+          <DefaultButton
+            className="btn btn-default"
+            onClick={this.scrollToElement}
+            value="contact-section"
+            type="button"
+          >
+          Contact Me
+          </DefaultButton>
         </PortfolioSection>
         <ContactSection id="contact-section">
           <SectionTitle>Contact Me</SectionTitle>
