@@ -12,7 +12,8 @@ const Section = styled.div`
   text-align: center;
   color: white;
   // make min height equal to window size
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
   // #####
   // used to vertically center children
@@ -43,7 +44,8 @@ const Button = styled.button`
 `
 
 const PrimaryButton = Button.extend`
-
+  // position: relative;
+  // z-index: 1;
 `
 
 const DefaultButton = Button.extend`
@@ -56,7 +58,7 @@ const DefaultButton = Button.extend`
 /*******************/
 const WelcomeSection = Section.extend`
   background-color: black;
-
+  position: fixed;
 `
 
 const Name = styled.h1`
@@ -74,7 +76,8 @@ const WelcomeText = styled.h2`
 /*****************/
 const AboutSection = Section.extend`
   background-color: gray;
-
+  margin-top: 100vh;
+  position: relative;
 `
 
 // container that holds content for about text
@@ -94,6 +97,7 @@ const AboutText = styled.p`
 /*********************/
 const PortfolioSection = Section.extend`
   background-color: black;
+  position: relative;
 `
 
 /********************/
@@ -101,6 +105,7 @@ const PortfolioSection = Section.extend`
 /********************/
 const ProjectsSection = Section.extend`
   background-color: gray;
+  position: relative;
 `
 
 /*******************/
@@ -108,13 +113,7 @@ const ProjectsSection = Section.extend`
 /*******************/
 const ContactSection = Section.extend`
   background-color: gray;
-`
-
-/*****************/
-/* Links Section */
-/*****************/
-const LinksSection = Section.extend`
-  background-color: gray;
+  position: relative;
 `
 
 const PortfolioRowContainer = styled.div`
@@ -160,7 +159,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{position: 'absolute'}}>
         <WelcomeSection>
           <ContentContainer>
             <Name>Ted Shin</Name>
@@ -177,13 +176,13 @@ class Main extends Component {
           </ContentContainer>
         </WelcomeSection>
         <AboutSection id="about-section">
-          <SectionTitle>A Little About Me</SectionTitle>
+          <SectionTitle>About Me</SectionTitle>
           <AboutContainer>
-            <AboutText>I am a Full Stack Developer with expertise in building web applications, APIs, and backend systems in Javascript, React, Redux, Node, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
+            <AboutText>I am a Full Stack Developer with experience in building web applications, APIs, and backend systems in Javascript, React, Node, Express, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
           </AboutContainer>
           <DefaultButton
-            className="btn btn-default"
+            className="btn btn-light"
             onClick={this.scrollToElement}
             value="portfolio-section"
             type="button"
@@ -192,7 +191,7 @@ class Main extends Component {
           </DefaultButton>
         </AboutSection>
         <PortfolioSection id="portfolio-section">
-          <SectionTitle>Web Portfolio</SectionTitle>
+          <SectionTitle>Projects</SectionTitle>
           <ContentContainer>
             <PortfolioRowContainer>
               <div>
@@ -256,7 +255,7 @@ class Main extends Component {
             </PortfolioRowContainer>
           </ContentContainer>
           <DefaultButton
-            className="btn btn-default"
+            className="btn btn-light"
             onClick={this.scrollToElement}
             value="contact-section"
             type="button"
@@ -266,7 +265,7 @@ class Main extends Component {
         </PortfolioSection>
         <ContactSection id="contact-section">
           <SectionTitle>Contact Me</SectionTitle>
-          <h2>t d y s h i n     @     g m a i l     .     com</h2>
+          <h2>t d y s h i n     @     g m a i l     .     c o m</h2>
           <LinksContainer>
             <FaLinkedin size={50} />
             <FaGithub size={50} />
