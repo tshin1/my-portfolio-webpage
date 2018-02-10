@@ -20,7 +20,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
+  justify-content: center;
   // #####
 `
 
@@ -76,6 +76,7 @@ const AboutSection = Section.extend`
   background-color: gray;
   margin-top: 100vh;
   position: relative;
+  min-height: 400px;
 `
 
 // container that holds content for about text
@@ -96,6 +97,7 @@ const AboutText = styled.p`
 const PortfolioSection = Section.extend`
   background-color: black;
   position: relative;
+  min-height: 850px;
 `
 
 const PortfolioRowContainer = styled.div`
@@ -121,6 +123,7 @@ const PortfolioImageRight = styled.img`
 const ContactSection = Section.extend`
   background-color: gray;
   position: relative;
+  min-height: 200px;
 `
 
 const LinksContainer = styled.div`
