@@ -14,7 +14,7 @@ const Section = styled.div`
   // make min height equal to window size
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  // overflow: hidden;
   // #####
   // used to vertically center children
   display: flex;

@@ -1,4 +1,10 @@
+body {
+  /*overflow-x gets rid of horizontal scroll bar that is created when width: 100vw is used*/
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
   user-select: none;
+
 }
