@@ -4,6 +4,7 @@ import { scroller } from 'react-scroll'
 import FaGithub from 'react-icons/lib/fa/github';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down';
+import FaEnvelope from 'react-icons/lib/fa/envelope';
 
 import './Main.css';
 
@@ -27,18 +28,16 @@ const Section = styled.div`
 // title text for sections
 const SectionTitle = styled.h2`
   color: white;
-  font-size: 2em;
+  font-size: 1.8em;
+  margin-bottom: 1.2em;
 `
 
 const ContentContainer = styled.div`
-  padding: 2em 2em;
+  // padding: 2em 2em;
 `
 
 const Button = styled.button`
-  border-radius: 0.3em;
-  padding: 0.5em;
-  border: 1px solid transparent;
-  cursor: pointer;
+  margin-top: 3em;
 `
 
 const PrimaryButton = Button.extend`
@@ -47,7 +46,6 @@ const PrimaryButton = Button.extend`
 `
 
 const DefaultButton = Button.extend`
-
   color: #333;
 `
 
@@ -82,13 +80,14 @@ const AboutSection = Section.extend`
 // container that holds content for about text
 const AboutContainer = styled.div`
   max-width: 50vw;
-  border: 2px solid black;
-  padding: 2em 2em;
+  // border: 2px solid black;
+  // padding: 2em 2em;
 `
 
 const AboutText = styled.p`
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
+  line-height: 1.4;
 `
 
 /*********************/
@@ -226,7 +225,7 @@ class Main extends Component {
                 </a>
               </div>
             </PortfolioRowContainer>
-            <PortfolioRowContainer>
+            <PortfolioRowContainer style={{marginBottom: 0}}>
               <div>
                 <a href="https://monitor-stocks.herokuapp.com/">
                   <PortfolioImageLeft
@@ -257,7 +256,7 @@ class Main extends Component {
           </DefaultButton>
         </PortfolioSection>
         <ContactSection id="contact-section">
-          <SectionTitle>Contact Me</SectionTitle>
+          <SectionTitle><FaEnvelope size={30} />Contact Me</SectionTitle>
           <h2>t d y s h i n     @     g m a i l     .     c o m</h2>
           <LinksContainer>
             <FaLinkedin size={50} />
