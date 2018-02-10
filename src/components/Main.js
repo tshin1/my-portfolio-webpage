@@ -9,7 +9,7 @@ import './Main.css';
 
 // styled components
 const Section = styled.div`
-  text-align: center;
+  // text-align: center;
   color: white;
   // make min height equal to window size
   height: 100vh;
@@ -20,7 +20,7 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   // #####
 `
 
@@ -31,9 +31,7 @@ const SectionTitle = styled.h2`
 `
 
 const ContentContainer = styled.div`
-  max-width: 70vw;
   padding: 2em 2em;
-  text-align: center;
 `
 
 const Button = styled.button`
@@ -100,22 +98,6 @@ const PortfolioSection = Section.extend`
   position: relative;
 `
 
-/********************/
-/* Projects Section */
-/********************/
-const ProjectsSection = Section.extend`
-  background-color: gray;
-  position: relative;
-`
-
-/*******************/
-/* Contact Section */
-/*******************/
-const ContactSection = Section.extend`
-  background-color: gray;
-  position: relative;
-`
-
 const PortfolioRowContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -124,13 +106,21 @@ const PortfolioRowContainer = styled.div`
 `
 
 const PortfolioImageLeft = styled.img`
-  width: 100%;
-  margin-right: 2em;
+  width: 25em;
+  padding-right: 1em;
 `
 
 const PortfolioImageRight = styled.img`
-  width: 100%;
-  margin-left: 2em;
+  width: 25em;
+  padding-left: 1em;
+`
+
+/*******************/
+/* Contact Section */
+/*******************/
+const ContactSection = Section.extend`
+  background-color: gray;
+  position: relative;
 `
 
 const LinksContainer = styled.div`
