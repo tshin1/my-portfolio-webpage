@@ -28,8 +28,9 @@ const Section = styled.div`
 // title text for sections
 const SectionTitle = styled.h2`
   color: white;
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 1.2em;
+
 `
 
 const ContentContainer = styled.div`
@@ -86,8 +87,9 @@ const AboutContainer = styled.div`
 
 const AboutText = styled.p`
   color: white;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.4;
+  font-family: 'Roboto Slab', sans-serif;
 `
 
 /*********************/
@@ -125,9 +127,14 @@ const ContactSection = Section.extend`
   min-height: 200px;
 `
 
+const ContactText = styled.h3`
+  margin-bottom: 0;
+`
+
 const LinksContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 1em 0;
 `
 
 class Main extends Component {
@@ -256,13 +263,13 @@ class Main extends Component {
           </DefaultButton>
         </PortfolioSection>
         <ContactSection id="contact-section">
-          <SectionTitle><FaEnvelope size={30} />Contact Me</SectionTitle>
-          <h2>t d y s h i n     @     g m a i l     .     c o m</h2>
+          <SectionTitle><FaEnvelope size={28} style={{position: 'relative', bottom: '4px', right: '10px'}}/>Contact Me</SectionTitle>
+          <ContactText>t d y s h i n     @     g m a i l     .     c o m</ContactText>
           <LinksContainer>
             <FaLinkedin size={50} />
             <FaGithub size={50} />
           </LinksContainer>
-          <h2> Copyright © 2018 Ted Shin</h2>
+          <ContactText> Copyright © 2018 Ted Shin</ContactText>
         </ContactSection>
       </div>
     );
