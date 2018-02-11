@@ -7,6 +7,7 @@ import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down';
 import FaEnvelope from 'react-icons/lib/fa/envelope';
 
 import './Main.css';
+import { backgroundColors } from './StyledComponentsVariables';
 
 // styled components
 const Section = styled.div`
@@ -54,7 +55,7 @@ const DefaultButton = Button.extend`
 /* Welcome Section */
 /*******************/
 const WelcomeSection = Section.extend`
-  background-color: black;
+  background-color: ${backgroundColors.welcome};
   position: fixed;
 `
 
@@ -72,7 +73,7 @@ const WelcomeText = styled.h2`
 /* About Section */
 /*****************/
 const AboutSection = Section.extend`
-  background-color: gray;
+  background-color: ${backgroundColors.about};
   margin-top: 100vh;
   position: relative;
   min-height: 400px;
@@ -93,27 +94,27 @@ const AboutText = styled.p`
 `
 
 /*********************/
-/* Portfolio Section */
+/* Projects Section */
 /*********************/
-const PortfolioSection = Section.extend`
-  background-color: black;
+const ProjectsSection = Section.extend`
+  background-color: ${backgroundColors.projects};
   position: relative;
   min-height: 850px;
 `
 
-const PortfolioRowContainer = styled.div`
+const ProjectsRowContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
   margin-bottom: 2em;
 `
 
-const PortfolioImageLeft = styled.img`
+const ProjectsImageLeft = styled.img`
   width: 25em;
   padding-right: 1em;
 `
 
-const PortfolioImageRight = styled.img`
+const ProjectsImageRight = styled.img`
   width: 25em;
   padding-left: 1em;
 `
@@ -122,7 +123,7 @@ const PortfolioImageRight = styled.img`
 /* Contact Section */
 /*******************/
 const ContactSection = Section.extend`
-  background-color: gray;
+  background-color: ${backgroundColors.contact};
   position: relative;
   min-height: 200px;
 `
@@ -189,13 +190,13 @@ class Main extends Component {
           Check Out My Projects
           </DefaultButton>
         </AboutSection>
-        <PortfolioSection id="portfolio-section">
+        <ProjectsSection id="portfolio-section">
           <SectionTitle>Projects</SectionTitle>
           <ContentContainer>
-            <PortfolioRowContainer>
+            <ProjectsRowContainer>
               <div>
                 <a href="https://pollsta.herokuapp.com/polls">
-                  <PortfolioImageLeft
+                  <ProjectsImageLeft
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
                     alt="Pollsta"
                     title="Pollsta"
@@ -204,18 +205,18 @@ class Main extends Component {
               </div>
               <div>
                 <a href="https://poppin-bars.herokuapp.com/search">
-                    <PortfolioImageRight
+                    <ProjectsImageRight
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/poppin-bars.png"
                       alt="Poppin Bars"
                       title="Poppin Bars"
                     />
                   </a>
               </div>
-            </PortfolioRowContainer>
-            <PortfolioRowContainer>
+            </ProjectsRowContainer>
+            <ProjectsRowContainer>
               <div>
                 <a href="https://tshin7.github.io/meteorite-landings-with-d3/">
-                  <PortfolioImageLeft
+                  <ProjectsImageLeft
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/meteorite.png"
                     alt="Meteorite Landings With D3"
                     title="Meteorite Landings With D3"
@@ -224,18 +225,18 @@ class Main extends Component {
               </div>
               <div>
                 <a href="https://tshin7.github.io/roguelike-cave-crawler/">
-                  <PortfolioImageRight
+                  <ProjectsImageRight
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/roguelike.png"
                     alt="Roguelike Cave Crawler"
                     title="Roguelike Cave Crawler"
                   />
                 </a>
               </div>
-            </PortfolioRowContainer>
-            <PortfolioRowContainer style={{marginBottom: 0}}>
+            </ProjectsRowContainer>
+            <ProjectsRowContainer style={{marginBottom: 0}}>
               <div>
                 <a href="https://monitor-stocks.herokuapp.com/">
-                  <PortfolioImageLeft
+                  <ProjectsImageLeft
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/stocks.png"
                     alt="Stocks Monitor"
                     title="Stocks Monitor"
@@ -244,14 +245,14 @@ class Main extends Component {
               </div>
               <div>
                 <a href="https://tshin7.github.io/simon-game-clone/">
-                  <PortfolioImageRight
+                  <ProjectsImageRight
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/simon.png"
                     alt="Simon Game Clone"
                     title="Simon Game Clone"
                   />
                 </a>
               </div>
-            </PortfolioRowContainer>
+            </ProjectsRowContainer>
           </ContentContainer>
           <DefaultButton
             className="btn btn-light"
@@ -261,7 +262,7 @@ class Main extends Component {
           >
           Contact Me
           </DefaultButton>
-        </PortfolioSection>
+        </ProjectsSection>
         <ContactSection id="contact-section">
           <SectionTitle><FaEnvelope size={28} style={{position: 'relative', bottom: '4px', right: '10px'}}/>Contact Me</SectionTitle>
           <ContactText>t d y s h i n     @     g m a i l     .     c o m</ContactText>
