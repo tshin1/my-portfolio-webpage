@@ -109,15 +109,31 @@ const ProjectsRowContainer = styled.div`
   margin-bottom: 2em;
 `
 
-const ProjectsImageLeft = styled.img`
+const ProjectsImage = styled.img`
   width: 25em;
+  border-radius: 0;
+  box-shadow: 5px 5px 3px #1e1e1e;
+  padding: 0;
+`
+
+const ProjectsImageLeftDiv = styled.div`
   padding-right: 1em;
 `
 
-const ProjectsImageRight = styled.img`
-  width: 25em;
+const ProjectsImageRightDiv = styled.div`
   padding-left: 1em;
 `
+
+
+// const ProjectsImageLeft = ProjectImage.extend`
+//   width: 25em;
+//   padding-right: 1em;
+// `
+//
+// const ProjectsImageRight = ProjectImage.extend`
+//   width: 25em;
+//   padding-left: 1em;
+// `
 
 /*******************/
 /* Contact Section */
@@ -151,8 +167,8 @@ class Main extends Component {
     // value holds the id of the target container
     const targetElementId = event.target.value;
     scroller.scrollTo(targetElementId, {
-      duration: 1500,
-      delay: 100,
+      duration: 1000,
+      delay: 0,
       smooth: true,
     });
   }
@@ -194,64 +210,64 @@ class Main extends Component {
           <SectionTitle>Projects</SectionTitle>
           <ContentContainer>
             <ProjectsRowContainer>
-              <div>
+              <ProjectsImageLeftDiv>
                 <a href="https://pollsta.herokuapp.com/polls">
-                  <ProjectsImageLeft
+                  <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
                     alt="Pollsta"
                     title="Pollsta"
                   />
                 </a>
-              </div>
-              <div>
+              </ProjectsImageLeftDiv>
+              <ProjectsImageRightDiv>
                 <a href="https://poppin-bars.herokuapp.com/search">
-                    <ProjectsImageRight
+                    <ProjectsImage
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/poppin-bars.png"
                       alt="Poppin Bars"
                       title="Poppin Bars"
                     />
                   </a>
-              </div>
+              </ProjectsImageRightDiv>
             </ProjectsRowContainer>
             <ProjectsRowContainer>
-              <div>
+              <ProjectsImageLeftDiv>
                 <a href="https://tshin7.github.io/meteorite-landings-with-d3/">
-                  <ProjectsImageLeft
+                  <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/meteorite.png"
                     alt="Meteorite Landings With D3"
                     title="Meteorite Landings With D3"
                   />
                 </a>
-              </div>
-              <div>
+              </ProjectsImageLeftDiv>
+              <ProjectsImageRightDiv>
                 <a href="https://tshin7.github.io/roguelike-cave-crawler/">
-                  <ProjectsImageRight
+                  <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/roguelike.png"
                     alt="Roguelike Cave Crawler"
                     title="Roguelike Cave Crawler"
                   />
                 </a>
-              </div>
+              </ProjectsImageRightDiv>
             </ProjectsRowContainer>
             <ProjectsRowContainer style={{marginBottom: 0}}>
-              <div>
+              <ProjectsImageLeftDiv>
                 <a href="https://monitor-stocks.herokuapp.com/">
-                  <ProjectsImageLeft
+                  <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/stocks.png"
                     alt="Stocks Monitor"
                     title="Stocks Monitor"
                   />
                 </a>
-              </div>
-              <div>
+              </ProjectsImageLeftDiv>
+              <ProjectsImageRightDiv>
                 <a href="https://tshin7.github.io/simon-game-clone/">
-                  <ProjectsImageRight
+                  <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/simon.png"
                     alt="Simon Game Clone"
                     title="Simon Game Clone"
                   />
                 </a>
-              </div>
+              </ProjectsImageRightDiv>
             </ProjectsRowContainer>
           </ContentContainer>
           <DefaultButton
