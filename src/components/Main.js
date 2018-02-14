@@ -99,7 +99,7 @@ const AboutText = styled.p`
 const ProjectsSection = Section.extend`
   background-color: ${backgroundColors.projects};
   position: relative;
-  min-height: 850px;
+  min-height: 900px;
 `
 
 const ProjectsRowContainer = styled.div`
@@ -114,6 +114,10 @@ const ProjectsImage = styled.img`
   border-radius: 0;
   box-shadow: 5px 5px 3px #1e1e1e;
   padding: 0;
+  &:hover {
+    opacity: 0.5;
+    transition: all 0.4s ease-out;
+  };
 `
 
 const ProjectsImageLeftDiv = styled.div`
@@ -141,7 +145,7 @@ const ProjectsImageRightDiv = styled.div`
 const ContactSection = Section.extend`
   background-color: ${backgroundColors.contact};
   position: relative;
-  min-height: 200px;
+  min-height: 280px;
 `
 
 const ContactText = styled.h3`
