@@ -110,22 +110,69 @@ const ProjectsRowContainer = styled.div`
 `
 
 const ProjectsImage = styled.img`
-  width: 25em;
+  // width: 25em;
+  width: 100%;
   border-radius: 0;
   box-shadow: 5px 5px 3px #1e1e1e;
   padding: 0;
+  filter: brightness(100%);
   &:hover {
-    opacity: 0.5;
+    filter: brightness(10%);
     transition: all 0.4s ease-out;
   };
 `
 
 const ProjectsImageLeftDiv = styled.div`
   padding-right: 1em;
+  width: 25em;
 `
 
 const ProjectsImageRightDiv = styled.div`
   padding-left: 1em;
+  width: 25em;
+`
+
+const A = styled.a`
+
+  // &:after {
+  //   position: relative;
+  //   opacity: 0;
+  //   transition: all 0.5s;
+  //   -webkit-transition: all 0.5s;
+  //
+  //   content: ' ';
+  //   width: 500px; height: 500px;
+  //   // top:0; left:0;
+  //   background:rgba(0,0,0,0.6);
+  // };
+  //
+  // &:before {
+  //   position: absolute;
+  //   opacity: 0;
+  //   transition: all 0.5s;
+  //   -webkit-transition: all 0.5s;
+  //
+  //   content: attr(data-content);
+  //   // width:100%;
+  //   color:#fff;
+  //   z-index:1;
+  //   // padding:10px 10px;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   text-align:center;
+  //   // background:red;
+  //   // box-sizing:border-box;
+  //   -moz-box-sizing:border-box;
+  //   vertical-align: middle;
+  // };
+  //
+  // &:hover:after {
+  //   opacity:1;
+  // }
+  //
+  // &:hover:before {
+  //   opacity:1;
+  // }
 `
 
 
@@ -215,13 +262,13 @@ class Main extends Component {
           <ContentContainer>
             <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
-                <a href="https://pollsta.herokuapp.com/polls">
+                <A href="https://pollsta.herokuapp.com/polls" data-content="hello world">
                   <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
                     alt="Pollsta"
                     title="Pollsta"
                   />
-                </a>
+                </A>
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
                 <a href="https://poppin-bars.herokuapp.com/search">
