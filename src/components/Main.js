@@ -99,7 +99,7 @@ const AboutText = styled.p`
 const ProjectsSection = Section.extend`
   background-color: ${backgroundColors.projects};
   position: relative;
-  min-height: 900px;
+  min-height: 850px;
 `
 
 const ProjectsRowContainer = styled.div`
@@ -117,7 +117,7 @@ const ProjectsImage = styled.img`
   padding: 0;
   filter: brightness(100%);
   &:hover {
-    filter: brightness(10%);
+    filter: brightness(20%);
     transition: all 0.4s ease-out;
   };
 `
@@ -131,60 +131,6 @@ const ProjectsImageRightDiv = styled.div`
   padding-left: 1em;
   width: 25em;
 `
-
-const A = styled.a`
-
-  // &:after {
-  //   position: relative;
-  //   opacity: 0;
-  //   transition: all 0.5s;
-  //   -webkit-transition: all 0.5s;
-  //
-  //   content: ' ';
-  //   width: 500px; height: 500px;
-  //   // top:0; left:0;
-  //   background:rgba(0,0,0,0.6);
-  // };
-  //
-  // &:before {
-  //   position: absolute;
-  //   opacity: 0;
-  //   transition: all 0.5s;
-  //   -webkit-transition: all 0.5s;
-  //
-  //   content: attr(data-content);
-  //   // width:100%;
-  //   color:#fff;
-  //   z-index:1;
-  //   // padding:10px 10px;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   text-align:center;
-  //   // background:red;
-  //   // box-sizing:border-box;
-  //   -moz-box-sizing:border-box;
-  //   vertical-align: middle;
-  // };
-  //
-  // &:hover:after {
-  //   opacity:1;
-  // }
-  //
-  // &:hover:before {
-  //   opacity:1;
-  // }
-`
-
-
-// const ProjectsImageLeft = ProjectImage.extend`
-//   width: 25em;
-//   padding-right: 1em;
-// `
-//
-// const ProjectsImageRight = ProjectImage.extend`
-//   width: 25em;
-//   padding-left: 1em;
-// `
 
 /*******************/
 /* Contact Section */
@@ -262,13 +208,13 @@ class Main extends Component {
           <ContentContainer>
             <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
-                <A href="https://pollsta.herokuapp.com/polls" data-content="hello world">
+                <a href="https://pollsta.herokuapp.com/polls" data-content="hello world">
                   <ProjectsImage
                     src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
                     alt="Pollsta"
                     title="Pollsta"
                   />
-                </A>
+                </a>
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
                 <a href="https://poppin-bars.herokuapp.com/search">
