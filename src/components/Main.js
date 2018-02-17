@@ -30,7 +30,7 @@ const Section = styled.div`
 const SectionTitle = styled.h2`
   color: white;
   font-size: 2em;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
 
 `
 
@@ -115,11 +115,13 @@ const ProjectsImage = styled.img`
   border-radius: 0;
   box-shadow: 5px 5px 3px #1e1e1e;
   padding: 0;
-  filter: brightness(100%);
-  &:hover {
-    filter: brightness(20%);
-    transition: all 0.4s ease-out;
-  };
+  // filter: brightness(100%);
+  // &:hover {
+  //   filter: brightness(20%);
+  //   transition: all 0.4s ease-out;
+  // };
+
+
 `
 
 const ProjectsImageLeftDiv = styled.div`
@@ -130,6 +132,40 @@ const ProjectsImageLeftDiv = styled.div`
 const ProjectsImageRightDiv = styled.div`
   padding-left: 1em;
   width: 25em;
+`
+
+const ImageTextLayer = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .9);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-out;
+  // transition: opacity .2s, visibility .2s;
+`
+
+const ImageWrap = styled.div`
+  position: relative;
+  // height: 200px;
+  // width: 257px;
+
+  &:hover ${ImageTextLayer} {
+    visibility: visible;
+    opacity: 1;
+  }
+`
+
+
+
+const ImageText = styled.p`
+
 `
 
 /*******************/
@@ -208,13 +244,18 @@ class Main extends Component {
           <ContentContainer>
             <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
-                <a href="https://pollsta.herokuapp.com/polls" data-content="hello world">
-                  <ProjectsImage
-                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
-                    alt="Pollsta"
-                    title="Pollsta"
-                  />
-                </a>
+                <ImageWrap>
+                  <a href="https://pollsta.herokuapp.com/polls" data-content="hello world">
+                    <ProjectsImage
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
+                      alt="Pollsta"
+                      title="Pollsta"
+                    />
+                      <ImageTextLayer>
+                        <ImageText>Pollsta</ImageText>
+                      </ImageTextLayer>
+                  </a>
+                </ImageWrap>
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
                 <a href="https://poppin-bars.herokuapp.com/search">
