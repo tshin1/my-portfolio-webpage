@@ -258,53 +258,78 @@ class Main extends Component {
                 </ImageWrap>
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
-                <a href="https://poppin-bars.herokuapp.com/search">
+                <ImageWrap>
+                  <a href="https://poppin-bars.herokuapp.com/search">
                     <ProjectsImage
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/poppin-bars.png"
                       alt="Poppin Bars"
                       title="Poppin Bars"
                     />
+                    <ImageTextLayer>
+                      <ImageText>Poppin Bars</ImageText>
+                    </ImageTextLayer>
                   </a>
+                </ImageWrap>
               </ProjectsImageRightDiv>
             </ProjectsRowContainer>
             <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
-                <a href="https://tshin7.github.io/meteorite-landings-with-d3/">
-                  <ProjectsImage
-                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/meteorite.png"
-                    alt="Meteorite Landings With D3"
-                    title="Meteorite Landings With D3"
-                  />
-                </a>
+                <ImageWrap>
+                  <a href="https://tshin7.github.io/meteorite-landings-with-d3/">
+                    <ProjectsImage
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/meteorite.png"
+                      alt="Meteorite Landings With D3"
+                      title="Meteorite Landings With D3"
+                    />
+                    <ImageTextLayer>
+                      <ImageText>Meteorite Landings</ImageText>
+                    </ImageTextLayer>
+                  </a>
+                </ImageWrap>
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
-                <a href="https://tshin7.github.io/roguelike-cave-crawler/">
-                  <ProjectsImage
-                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/roguelike.png"
-                    alt="Roguelike Cave Crawler"
-                    title="Roguelike Cave Crawler"
-                  />
-                </a>
+                <ImageWrap>
+                  <a href="https://tshin7.github.io/roguelike-cave-crawler/">
+                    <ProjectsImage
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/roguelike.png"
+                      alt="Roguelike Cave Crawler"
+                      title="Roguelike Cave Crawler"
+                    />
+                    <ImageTextLayer>
+                      <ImageText>Roguelike Cave Crawler</ImageText>
+                    </ImageTextLayer>
+                  </a>
+                </ImageWrap>
               </ProjectsImageRightDiv>
             </ProjectsRowContainer>
             <ProjectsRowContainer style={{marginBottom: 0}}>
               <ProjectsImageLeftDiv>
-                <a href="https://monitor-stocks.herokuapp.com/">
-                  <ProjectsImage
-                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/stocks.png"
-                    alt="Stocks Monitor"
-                    title="Stocks Monitor"
-                  />
-                </a>
+                <ImageWrap>
+                  <a href="https://monitor-stocks.herokuapp.com/">
+                    <ProjectsImage
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/stocks.png"
+                      alt="Stocks Monitor"
+                      title="Stocks Monitor"
+                    />
+                    <ImageTextLayer>
+                      <ImageText>Stocks Monitor</ImageText>
+                    </ImageTextLayer>
+                  </a>
+                </ImageWrap>
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
-                <a href="https://tshin7.github.io/simon-game-clone/">
-                  <ProjectsImage
-                    src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/simon.png"
-                    alt="Simon Game Clone"
-                    title="Simon Game Clone"
-                  />
-                </a>
+                <ImageWrap>
+                  <a href="https://tshin7.github.io/simon-game-clone/">
+                    <ProjectsImage
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/simon.png"
+                      alt="Simon Game Clone"
+                      title="Simon Game Clone"
+                    />
+                    <ImageTextLayer>
+                      <ImageText>Simon Game</ImageText>
+                    </ImageTextLayer>
+                  </a>
+                </ImageWrap>
               </ProjectsImageRightDiv>
             </ProjectsRowContainer>
           </ContentContainer>
