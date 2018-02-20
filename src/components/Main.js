@@ -100,6 +100,10 @@ const ProjectsSection = Section.extend`
   background-color: ${backgroundColors.projects};
   position: relative;
   min-height: 850px;
+
+  @media (max-width: 900px) {
+    height: 1650px;
+  }
 `
 
 const ProjectsRowContainer = styled.div`
@@ -107,6 +111,11 @@ const ProjectsRowContainer = styled.div`
   flex-direction: row;
   width: 100%;
   margin-bottom: 2em;
+
+  @media (max-width: 900px) {
+    display: block;
+    margin-bottom: 0;
+  }
 `
 
 const ProjectsImage = styled.img`
@@ -120,18 +129,26 @@ const ProjectsImage = styled.img`
   //   filter: brightness(20%);
   //   transition: all 0.4s ease-out;
   // };
-
-
 `
 
 const ProjectsImageLeftDiv = styled.div`
   padding-right: 1em;
   width: 25em;
+
+  @media (max-width: 900px) {
+    padding-right: 0;
+    margin-bottom: 2em;
+  }
 `
 
 const ProjectsImageRightDiv = styled.div`
   padding-left: 1em;
   width: 25em;
+
+  @media (max-width: 900px) {
+    padding-left: 0;
+    margin-bottom: 2em;
+  }
 `
 
 const ImageTextLayer = styled.div`
@@ -302,7 +319,7 @@ class Main extends Component {
                 </ImageWrap>
               </ProjectsImageRightDiv>
             </ProjectsRowContainer>
-            <ProjectsRowContainer style={{marginBottom: 0}}>
+            <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
                 <ImageWrap>
                   <a href="https://monitor-stocks.herokuapp.com/">
