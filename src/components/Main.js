@@ -39,7 +39,7 @@ const ContentContainer = styled.div`
 `
 
 const Button = styled.button`
-  margin-top: 3em;
+  // margin-top: 3em;
 `
 
 const PrimaryButton = Button.extend`
@@ -69,6 +69,10 @@ const WelcomeText = styled.h2`
   font-size: 2em;
 `
 
+const WelcomeSectionButton = PrimaryButton.extend`
+  margin-top: 2em;
+`
+
 /*****************/
 /* About Section */
 /*****************/
@@ -91,6 +95,10 @@ const AboutText = styled.p`
   font-size: 1.2em;
   line-height: 1.4;
   font-family: 'Roboto Slab', sans-serif;
+`
+
+const AboutSectionButton = DefaultButton.extend`
+  margin-top: 2em;
 `
 
 /*********************/
@@ -230,7 +238,7 @@ class Main extends Component {
           <ContentContainer>
             <Name>Ted Shin</Name>
             <WelcomeText>Hi, I'm a Software Engineer</WelcomeText>
-            <PrimaryButton
+            <WelcomeSectionButton
               className="btn btn-primary"
               onClick={this.scrollToElement}
               value="about-section"
@@ -238,7 +246,7 @@ class Main extends Component {
             >
               <FaAngleDoubleDown size={20} />
               Let's Get Started
-            </PrimaryButton>
+            </WelcomeSectionButton>
           </ContentContainer>
         </WelcomeSection>
         <AboutSection id="about-section">
@@ -247,14 +255,14 @@ class Main extends Component {
             <AboutText>I am a Full Stack Developer with experience in building web applications, APIs, and backend systems in Javascript, React, Node, Express, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
           </AboutContainer>
-          <DefaultButton
+          <AboutSectionButton
             className="btn btn-light"
             onClick={this.scrollToElement}
             value="portfolio-section"
             type="button"
           >
           Check Out My Projects
-          </DefaultButton>
+          </AboutSectionButton>
         </AboutSection>
         <ProjectsSection id="portfolio-section">
           <SectionTitle>Projects</SectionTitle>
