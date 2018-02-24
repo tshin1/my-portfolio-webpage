@@ -29,9 +29,11 @@ const Section = styled.div`
 // title text for sections
 const SectionTitle = styled.h2`
   color: white;
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 1em;
-
+  @media (max-width: 800px) {
+    font-size: 2em;
+  }
 `
 
 const ContentContainer = styled.div`
@@ -62,11 +64,10 @@ const WelcomeSection = Section.extend`
 const Name = styled.h1`
   color: white;
   font-size: 4em;
-`
 
-const WelcomeText = styled.h2`
-  color: white;
-  font-size: 2em;
+  @media (max-width: 800px) {
+    font-size: 3.5em;
+  }
 `
 
 const WelcomeSectionButton = PrimaryButton.extend`
@@ -95,6 +96,10 @@ const AboutText = styled.p`
   font-size: 1.2em;
   line-height: 1.4;
   font-family: 'Roboto Slab', sans-serif;
+
+  @media (max-width: 800px) {
+    font-size: 1em;
+  }
 `
 
 const AboutSectionButton = DefaultButton.extend`
@@ -204,6 +209,11 @@ const ContactSection = Section.extend`
 
 const ContactText = styled.h3`
   margin-bottom: 0;
+  font-size: 1.8em;
+
+  @media (max-width: 800px) {
+    font-size: 1.6em;
+  }
 `
 
 const LinksContainer = styled.div`
@@ -237,7 +247,7 @@ class Main extends Component {
         <WelcomeSection>
           <ContentContainer>
             <Name>Ted Shin</Name>
-            <WelcomeText>Hi, I'm a Software Engineer</WelcomeText>
+            <SectionTitle>Hi, I'm a Software Engineer</SectionTitle>
             <WelcomeSectionButton
               className="btn btn-primary"
               onClick={this.scrollToElement}
