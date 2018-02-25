@@ -31,8 +31,13 @@ const SectionTitle = styled.h2`
   color: white;
   font-size: 2.5em;
   margin-bottom: 1em;
+
   @media (max-width: 800px) {
     font-size: 2em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6em;
   }
 `
 
@@ -73,6 +78,10 @@ const Name = styled.h1`
   @media (max-width: 800px) {
     font-size: 3.5em;
   }
+
+  @media (max-width: 480px) {
+    font-size: 3em;
+  }
 `
 
 const WelcomeSectionButton = PrimaryButton.extend`
@@ -94,6 +103,15 @@ const AboutContainer = styled.div`
   max-width: 50vw;
   // border: 2px solid black;
   // padding: 2em 2em;
+
+  @media (max-width: 800px) {
+    max-width: 60vw;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 80vw;
+
+  }
 `
 
 const AboutText = styled.p`
@@ -104,6 +122,11 @@ const AboutText = styled.p`
 
   @media (max-width: 800px) {
     font-size: 1em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.85em;
+
   }
 `
 
@@ -222,6 +245,10 @@ const ContactText = styled.h3`
 
   @media (max-width: 800px) {
     font-size: 1.6em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4em;
   }
 `
 
