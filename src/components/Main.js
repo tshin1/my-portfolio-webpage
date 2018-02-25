@@ -45,12 +45,17 @@ const Button = styled.button`
 `
 
 const PrimaryButton = Button.extend`
-  // position: relative;
-  // z-index: 1;
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 const DefaultButton = Button.extend`
   color: #333;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
 
 /*******************/
@@ -116,6 +121,10 @@ const ProjectsSection = Section.extend`
 
   @media (max-width: 900px) {
     height: 1650px;
+  }
+
+  @media (max-width: 800px) {
+    height: 1525px;
   }
 `
 
@@ -223,9 +232,6 @@ const LinksContainer = styled.div`
 `
 
 class Main extends Component {
-  constructor (props) {
-    super(props);
-  }
 
   state = {
 
