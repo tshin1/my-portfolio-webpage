@@ -84,6 +84,21 @@ const Name = styled.h1`
   }
 `
 
+const Greeting = styled.h2`
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+
+  @media (max-width: 800px) {
+    font-size: 2em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6em;
+    max-width: 80vw;
+  }
+`
+
 const WelcomeSectionButton = PrimaryButton.extend`
   margin-top: 2em;
 `
@@ -149,6 +164,10 @@ const ProjectsSection = Section.extend`
   @media (max-width: 800px) {
     height: 1525px;
   }
+
+  @media (max-width: 480px) {
+    height: 1525px;
+  }
 `
 
 const ProjectsRowContainer = styled.div`
@@ -184,6 +203,10 @@ const ProjectsImageLeftDiv = styled.div`
     padding-right: 0;
     margin-bottom: 2em;
   }
+
+  @media (max-width: 480px) {
+    width: 80vw;
+  }
 `
 
 const ProjectsImageRightDiv = styled.div`
@@ -193,6 +216,10 @@ const ProjectsImageRightDiv = styled.div`
   @media (max-width: 900px) {
     padding-left: 0;
     margin-bottom: 2em;
+  }
+
+  @media (max-width: 480px) {
+    width: 80vw;
   }
 `
 
@@ -280,7 +307,7 @@ class Main extends Component {
         <WelcomeSection>
           <ContentContainer>
             <Name>Ted Shin</Name>
-            <SectionTitle>Hi, I'm a Software Engineer</SectionTitle>
+            <Greeting>Hi, I'm a Software Engineer</Greeting>
             <WelcomeSectionButton
               className="btn btn-primary"
               onClick={this.scrollToElement}
