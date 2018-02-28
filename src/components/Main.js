@@ -166,7 +166,8 @@ const ProjectsSection = Section.extend`
   }
 
   @media (max-width: 480px) {
-    height: 1525px;
+    height: 100%;
+    padding-top: 1em;
   }
 `
 
