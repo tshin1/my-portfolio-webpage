@@ -286,6 +286,11 @@ const LinksContainer = styled.div`
   margin: 1em 0;
 `
 
+const LinksAnchor = styled.a`
+  text-decoration: inherit;
+  color: inherit;
+`
+
 class Main extends Component {
 
   state = {
@@ -442,8 +447,12 @@ class Main extends Component {
           <SectionTitle><FaEnvelope size={28} style={{position: 'relative', bottom: '4px', right: '10px'}}/>Contact Me</SectionTitle>
           <ContactText>t d y s h i n     @     g m a i l     .     c o m</ContactText>
           <LinksContainer>
-            <FaLinkedin size={50} />
-            <FaGithub size={50} />
+            <LinksAnchor href="https://www.linkedin.com/in/tshin7/">
+              <FaLinkedin size={50} />
+            </LinksAnchor>
+            <LinksAnchor href="https://github.com/tshin7/">
+              <FaGithub size={50} />
+            </LinksAnchor>
           </LinksContainer>
           <ContactText> Copyright © 2018 Ted Shin</ContactText>
         </ContactSection>
