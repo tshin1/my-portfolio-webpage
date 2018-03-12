@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { scroller } from 'react-scroll'
+import { scroller } from 'react-scroll';
 import FaGithub from 'react-icons/lib/fa/github';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 import FaAngleDoubleDown from 'react-icons/lib/fa/angle-double-down';
