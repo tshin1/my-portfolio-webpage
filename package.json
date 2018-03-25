@@ -2,7 +2,7 @@
   "name": "my-portfolio-webpage",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tshin7.github.io/portfolio",
+  "homepage": "https://tshin7.github.io/",
   "dependencies": {
     "axios": "^0.16.2",
     "gh-pages": "^1.1.0",
