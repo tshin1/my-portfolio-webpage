@@ -376,7 +376,7 @@ class Main extends Component {
             <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
                 <ImageWrap>
-                  <a href="https://www.tdyshin.com/meteorite-landings-with-d3/">
+                  <a href="https://tshin7.github.io/meteorite-landings-with-d3/">
                     <ProjectsImage
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/meteorite.png"
                       alt="Meteorite Landings With D3"
@@ -390,7 +390,7 @@ class Main extends Component {
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
                 <ImageWrap>
-                  <a href="https://www.tdyshin.com/roguelike-cave-crawler/">
+                  <a href="https://tshin7.github.io/roguelike-cave-crawler/">
                     <ProjectsImage
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/roguelike.png"
                       alt="Roguelike Cave Crawler"
@@ -420,7 +420,7 @@ class Main extends Component {
               </ProjectsImageLeftDiv>
               <ProjectsImageRightDiv>
                 <ImageWrap>
-                  <a href="https://www.tdyshin.com/simon-game-clone/">
+                  <a href="https://tshin7.github.io/simon-game-clone/">
                     <ProjectsImage
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/simon.png"
                       alt="Simon Game Clone"
