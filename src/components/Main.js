@@ -328,7 +328,7 @@ class Main extends Component {
         <AboutSection id="about-section">
           <SectionTitle>About Me</SectionTitle>
           <AboutContainer>
-            <AboutText>I am a Full Stack Developer with experience in building web applications, APIs, and backend systems in Javascript, React, Node, Express, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
+            <AboutText>I am a Full Stack Developer based in Boston with experience in building web applications, APIs, and backend systems in Javascript, React, Node, Express, Sass, CSS, HTML, MongoDB, and Linux</AboutText>
             <AboutText>I have a BS in Computer Science from CCNY</AboutText>
           </AboutContainer>
           <AboutSectionButton
