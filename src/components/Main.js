@@ -312,7 +312,7 @@ class Main extends Component {
       <div style={{position: 'absolute'}}>
         <WelcomeSection>
           <ContentContainer>
-            <Name>Ted Shin</Name>
+            <Name>Theodore Shin</Name>
             <Greeting>Hi, I'm a Software Engineer</Greeting>
             <WelcomeSectionButton
               className="btn btn-primary"
@@ -454,7 +454,7 @@ class Main extends Component {
               <FaGithub size={50} />
             </LinksAnchor>
           </LinksContainer>
-          <ContactText> Copyright © 2018 Ted Shin</ContactText>
+          <ContactText> Copyright © 2018 Theodore Shin</ContactText>
         </ContactSection>
       </div>
     );
