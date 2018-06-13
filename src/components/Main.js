@@ -346,6 +346,20 @@ class Main extends Component {
             <ProjectsRowContainer>
               <ProjectsImageLeftDiv>
                 <ImageWrap>
+                  <a href="https://tshin7.github.io/korean-typing-practice/" data-content="hello world">
+                    <ProjectsImage
+                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/76648e9d03fe770ddfdb405c60ed5113e3842a01/korean_typing_1.png"
+                      alt="Pollsta"
+                      title="Pollsta"
+                    />
+                      <ImageTextLayer>
+                        <ImageText>Korean Typing Practice</ImageText>
+                      </ImageTextLayer>
+                  </a>
+                </ImageWrap>
+              </ProjectsImageLeftDiv>
+              <ProjectsImageRightDiv>
+                <ImageWrap>
                   <a href="https://pollsta.herokuapp.com/polls" data-content="hello world">
                     <ProjectsImage
                       src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/pollsta.png"
@@ -355,20 +369,6 @@ class Main extends Component {
                       <ImageTextLayer>
                         <ImageText>Pollsta</ImageText>
                       </ImageTextLayer>
-                  </a>
-                </ImageWrap>
-              </ProjectsImageLeftDiv>
-              <ProjectsImageRightDiv>
-                <ImageWrap>
-                  <a href="https://poppin-bars.herokuapp.com/search">
-                    <ProjectsImage
-                      src="https://gist.githubusercontent.com/tshin7/89d6aa5b55016ba8a8a9b6e77e498485/raw/7355dabc9199ba1dc3a0646f7362cee5fdab7fed/poppin-bars.png"
-                      alt="Poppin Bars"
-                      title="Poppin Bars"
-                    />
-                    <ImageTextLayer>
-                      <ImageText>Poppin Bars</ImageText>
-                    </ImageTextLayer>
                   </a>
                 </ImageWrap>
               </ProjectsImageRightDiv>
