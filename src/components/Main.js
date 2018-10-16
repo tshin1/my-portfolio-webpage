@@ -313,7 +313,7 @@ class Main extends Component {
         <WelcomeSection>
           <ContentContainer>
             <Name>Theodore Shin</Name>
-            <Greeting>Hi, I'm a Software Engineer</Greeting>
+            <Greeting>Hi, I'm a Developer</Greeting>
             <WelcomeSectionButton
               className="btn btn-primary"
               onClick={this.scrollToElement}
